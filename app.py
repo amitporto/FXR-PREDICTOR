@@ -75,7 +75,7 @@ def plot_similarity_map(mol, model):
 def main():
     st.title("FXR PREDICTOR")
 
-    st.subheader("This app calculates the activity of the chemical compounds against Farnesoid X receptor (Bile acid receptor) as per fingerprint-based model")
+    st.subheader("This app predicts the binding potential of the chemical compounds towards Farnesoid X receptor (Bile acid receptor) as per fingerprint-based model")
     st.write("Input a SMILES notation of a chemical compound to predict its activity.")
 
     # Input SMILES notation
