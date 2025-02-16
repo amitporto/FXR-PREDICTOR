@@ -116,8 +116,8 @@ def main():
             fig=res.GetDrawingText()
             st.image(fig)
             st.markdown("**Colour scheme:**")
-            st.markdown('<span style="color:green">The fragments of the molecule that increase the inhibitory activity of the compound</span>', unsafe_allow_html=True)
-            st.markdown('<span style="color:red">The fragments of the molecule that decrease the inhibitory activity of the compound</span>', unsafe_allow_html=True)
+            st.markdown('<span style="color:green">The fragments of the molecule that increase the binding potential of the compound</span>', unsafe_allow_html=True)
+            st.markdown('<span style="color:red">The fragments of the molecule that decrease the binding potential of the compound</span>', unsafe_allow_html=True)
 
 
 
