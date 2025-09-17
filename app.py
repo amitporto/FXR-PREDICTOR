@@ -94,7 +94,7 @@ def main():
 
             # Predict activity for fingerprint based model
             prediction = model.predict([fingerprint])
-            activity = "Active (IC50 < 1000 nM)" if prediction[0] == 1 else "Inactive (IC50 >= 1000 nM)"
+            activity = "Active (EC50 < 1000 nM)" if prediction[0] == 1 else "Inactive (EC50 >= 1000 nM)"
             st.write("## Predicted activity, AD and similarity map (as per fingerprint-based model)")
             st.write(f"Predicted Activity as per fingerprint based model: **{activity}**")
 
@@ -148,3 +148,4 @@ st.markdown(
 
 if __name__ == "__main__":
     main()
+
