@@ -139,7 +139,7 @@ st.markdown(
     }
     </style>
     <div class="footer">
-        Developed using Streamlit by Dr. Amit Kumar Halder, Associate Professor, Dr. B. C. Roy College of Pharmacy and AHS, India | <a href="https://bcrcp.ac.in/" target="_blank">About Us</a>
+        Developed using Streamlit by Dr. Amit Kumar Halder, Professor, Dr. B. C. Roy College of Pharmacy and AHS, India | <a href="https://bcrcp.ac.in/" target="_blank">About Us</a>
         This work is funded by the Department of Science and Technology and Biotechnology, Govt. of West Bengal, India Vide Memo. 2027 (Sanc.)/STBT-11012 (19)/ 6/2023-ST SEC, dated 24-01-2024.
     </div>
     """,
@@ -148,4 +148,5 @@ st.markdown(
 
 if __name__ == "__main__":
     main()
+
 
