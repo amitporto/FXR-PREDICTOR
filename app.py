@@ -100,7 +100,7 @@ def main():
 
             #Check applicability domain
             value=applicability(smiles,sdf1)
-            if value>=0.4:
+            if value>=0.3:
                st.write("The compound falls within AD of of the model (as per fingerprint based model)")
             else:
                st.write("The compound falls outside AD of of the model (as per fingerprint based model)")
