@@ -34,7 +34,7 @@ def generate_fingerprint(smiles):
     return mol, arr
 
 def fpFunction(m, atomId=-1):
-    fp = SimilarityMaps.GetMorganFingerprint(m, atomId=atomId, radius=2, nBits=1024,useChirality = True)
+    fp = SimilarityMaps.GetMorganFingerprint(m, atomId=atomId, radius=4, nBits=1024,useChirality = True)
     return fp
 
 def getProba(fp, predictionFunction):
@@ -53,9 +53,9 @@ sdf1="training_fp_minimized.sdf"
 def applicability(smiles,sdf):
     m=Chem.MolFromSmiles(smiles)
     for mol in Chem.SDMolSupplier("training_fp_minimized.sdf"):
-        mg = AllChem.GetMorganFingerprintAsBitVect(mol, radius=2,nBits=1024,useFeatures=True,useChirality = True)
+        mg = AllChem.GetMorganFingerprintAsBitVect(mol, radius=4,nBits=1024,useFeatures=False,useChirality = True)
         if m is not None:
-           mg_ = AllChem.GetMorganFingerprintAsBitVect(m, 2, useFeatures=True)
+           mg_ = AllChem.GetMorganFingerprintAsBitVect(m, 4, useFeatures=False)
            d_ECFP4.setdefault(Chem.MolToSmiles(m),[]).append(DataStructs.FingerprintSimilarity(mg, mg_))
 
     df_ECFP4 = pd.DataFrame.from_dict(d_ECFP4)
